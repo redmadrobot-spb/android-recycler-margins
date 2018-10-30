@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/borderLayout"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:background="@android:color/black"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/borderLayout"
+        app:layout_constraintTop_toTopOf="@+id/borderLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/borderLayout"
+        app:layout_constraintEnd_toEndOf="@+id/borderLayout"
+        android:layout_margin="2dp"/>
+
+    <LinearLayout
+        android:id="@+id/actionsLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/borderLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/borderLayout"
+        app:layout_constraintTop_toTopOf="@+id/borderLayout" />
+
+</android.support.constraint.ConstraintLayout>
